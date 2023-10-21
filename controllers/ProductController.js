@@ -1,4 +1,4 @@
-const UserModel= require('../models/Productmodel')
+const ProductModel= require('../models/Productmodel')
 // const auth = require('../middleware/auth')
 const bcrypt = require('bcrypt')
 const cloudinary = require('cloudinary').v2;
