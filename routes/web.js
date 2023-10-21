@@ -6,9 +6,9 @@ const islogin = require('../middleware/islogin')
 const routes = express.Router()
 
 
-routes.get('/display',checkuserauth,ProductController.display)
-routes.get('/view/:id',checkuserauth,ProductController.view)
-routes.get('/delete/:id',checkuserauth,ProductController.delete)
+routes.get('/display',ProductController.display)
+routes.get('/view/:id',ProductController.view)
+routes.get('/delete/:id',ProductController.delete)
 
 //AdminController
 routes.post('/insert',AdminController.insert)
