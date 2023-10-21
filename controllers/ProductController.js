@@ -1,4 +1,4 @@
-const UserModel= require('../models/Usermodel')
+const UserModel= require('../models/Productmodel')
 // const auth = require('../middleware/auth')
 const bcrypt = require('bcrypt')
 const cloudinary = require('cloudinary').v2;
@@ -19,7 +19,7 @@ class ProductController
    {
    try 
    {
-    const data = await UserModel.find()
+    const data = await ProductModel.find()
     res.status(401)
                         .json({ success:true,
                       data
@@ -34,7 +34,7 @@ class ProductController
    {
    try 
    {
-    const data = await UserModel.findById(req.params.id)
+    const data = await ProductModel.findById(req.params.id)
     res.status(401)
                         .json({
                            success:true,
@@ -51,7 +51,7 @@ class ProductController
     {
         try 
         {
-           await UserModel.findByIdAndDelete(req.params.id)
+           await ProductModel.findByIdAndDelete(req.params.id)
            res.status(401)
                         .json
                         ({ status: "failed", message: "Delete successfully😓" });
